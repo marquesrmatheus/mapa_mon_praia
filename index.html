@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        /* Estilo para o mapa ocupar toda a tela */
+        #map {
+            height: 100vh; /* Altura do mapa igual a altura da tela */
+            width: 100%;   /* Largura do mapa igual a largura da tela */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        // Inicializando o mapa
+        var map = L.map('map').setView([-17.983, -53.500], 6); // Posição inicial e nível de zoom
+
+        // Adicionando a camada de tiles do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adicionando um marcador no mapa
+        L.marker([-17.983, -53.500]).addTo(map)
+            .bindPopup("Aqui é um ponto no mapa!")
+            .openPopup();
+    </script>
+
+</body>
+</html>
