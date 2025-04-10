@@ -1,0 +1,1 @@
+var json_PecmCumbuco_1 = {"type":"FeatureCollection","name":"PecmCumbuco_1","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"Name":"Pecém - Cumbuco"},"geometry":{"type":"Point","coordinates":[-38.76181,-3.60663]}}]}
