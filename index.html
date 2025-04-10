@@ -6,8 +6,7 @@
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <title>Monitoramento de Praia - CIPP</title>
-        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="./resources/ol.css"> 
         <link rel="stylesheet" href="resources/fontawesome-all.min.css">
         <link href="resources/ol-geocoder.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
@@ -43,16 +42,34 @@
             padding: 0;
             margin: 0;
         }
+
+        /* Estilo para o título no canto superior esquerdo */
+        #map-title {
+            position: absolute;
+            top: 10px;  /* Ajuste a distância do topo */
+            left: 10px; /* Ajuste a distância da esquerda */
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+        }
         </style>
+
         <title></title>
     </head>
     <body>
+        <!-- Título no canto superior esquerdo -->
+        <div id="map-title">Monitoramento de Praia - CIPP</div>
+
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content"></div>
             </div>
         </div>
+
         <script src="resources/qgis2web_expressions.js"></script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
